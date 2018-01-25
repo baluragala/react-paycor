@@ -1,0 +1,35 @@
+Day 1
+-----
+Expectations
+------------
+1. Best practices
+2. Components compositions
+
+
+Additional
+----------
+redux-form
+webpack
+
+
+ES6
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

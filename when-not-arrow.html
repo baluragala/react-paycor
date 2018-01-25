@@ -1,0 +1,20 @@
+<html>
+
+<head></head>
+
+<body>
+    <button id="btnglow" style="width:100px; height: 100px; font-size:2em">Glow</button>
+
+    <script>
+        const btn = document.querySelector('#btnglow');
+        console.log(btn)
+        btn.addEventListener('click', function () {
+            // normal function -> `this` binds to execution context 
+            // arrow function => `this` binds to context inherited inherit from parent
+            console.log(this.style);
+            this.style.backgroundColor = this.style.backgroundColor === 'yellow' ? "" : "yellow";
+        })
+    </script>
+</body>
+
+</html>
