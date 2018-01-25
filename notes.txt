@@ -14,6 +14,19 @@ webpack
 
 ES6
 ---
+1. scoping - let & const
+hoisting
+2. rest
+3. spread
+4. template strings
+5. default params
+6. arrow functions
+7. classes
+8. object literal improvements
+9. promises
+
+
+
 
 
 
