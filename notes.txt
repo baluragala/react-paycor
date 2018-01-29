@@ -24,6 +24,98 @@ hoisting
 7. classes
 8. object literal improvements
 9. promises
+10. closure
+
+Day 2
+-----
+generators
+ES6 Modules
+React basics
+DOM vs VDOM
+Component Architecture
+Create
+	Class based
+	Function based 
+		normal
+		arrow function
+JSX - JavaScript in XML syntax
+
+Day 3
+----- 
+
+List - state -> chocolates:[{name,price,soh}]
+	ListItem -> sell
+
+
+Day 4
+-----
+scoping
+hoisting
+rest
+spread
+template strings
+arrow functions
+class
+destructuring
+loops
+iterators
+generators
+promises
+modules
+
+React
+-----
+class
+function
+JSX -> React.createElement
+
+props
+state
+
+this.setState()
+this.state
+
+constructor
+
+props 	
+callback	
+	
+controlled and 
+
+onclick - html
+onClick - React
+
+chocolate store 
+---------------
+/ -> Home -> You tell about your site
+/chocolates -> List
+/contact -> Contact
+
+
+
+http://localhost:3000/chocolates -> L1
+
+
+http://localhost:3000/chocolates/add -> L2
+
+http://localhost:3000/add 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

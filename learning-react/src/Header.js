@@ -1,6 +1,24 @@
-import React from "react";
-function Header() {
-  return <h1>This is Site Header</h1>;
+import React, { Component } from "react";
+// function Header(args) {
+//   let { title, subtitle } = args.options;
+//   return (
+//     <div>
+//       <h1>{title}</h1>
+//       <h3>{subtitle}</h3>
+//     </div>
+//   );
+// }
+
+class Header extends Component {
+  render() {
+    let { title, subtitle } = this.props.options;
+    return (
+      <div>
+        <h1>{title}</h1>
+        <h3>{subtitle}</h3>
+      </div>
+    );
+  }
 }
 
 export default Header;
