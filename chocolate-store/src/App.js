@@ -19,14 +19,17 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Header />
-        {/*<AddChocolate /> */}
+        <List />
+        {/*<AddChocolate /> 
         <Switch>
           <Route exact path="/chocolates" component={List} />
           <Route path="/chocolates/:cid/detail" component={Detail} />
           <Route path="/home" component={Home} />
           <Route path="/contact" component={Contact} />
           <Route render={() => <h1>NOT FOUND</h1>} />
+          
         </Switch>
+        */}
       </div>
     );
   }

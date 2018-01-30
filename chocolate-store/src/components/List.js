@@ -7,50 +7,23 @@ import Header from "./Header";
 class List extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      chocolates: [
-        {
-          id: 1,
-          name: "Diary Milk",
-          brand: "Cadbury",
-          size: "small",
-          price: "5",
-          soh: 10
-        },
-        {
-          id: 2,
-          name: "5 Star",
-          brand: "Cadbury",
-          size: "small",
-          price: "5",
-          soh: 10
-        },
-        {
-          id: 3,
-          name: "KitKat",
-          brand: "Nestle",
-          size: "small",
-          price: "8",
-          soh: 4
-        }
-      ]
-    };
+    this.state = {};
   }
 
-  handleSell = id => {
-    var chocolates = [];
-    this.state.chocolates.forEach((ele, index, arr) => {
-      if (ele.id === id) {
-        let newChoc = Object.assign({}, ele);
-        newChoc.soh -= 1;
-        chocolates.push(newChoc);
-      } else {
-        chocolates.push(ele);
-      }
-    });
-    //let newState = Object.assign({}, { chocolates });
-    this.setState({ chocolates });
-  };
+  // handleSell = id => {
+  //   var chocolates = [];
+  //   this.state.chocolates.forEach((ele, index, arr) => {
+  //     if (ele.id === id) {
+  //       let newChoc = Object.assign({}, ele);
+  //       newChoc.soh -= 1;
+  //       chocolates.push(newChoc);
+  //     } else {
+  //       chocolates.push(ele);
+  //     }
+  //   });
+  //   //let newState = Object.assign({}, { chocolates });
+  //   this.setState({ chocolates });
+  // };
 
   render() {
     return (
@@ -67,14 +40,15 @@ class List extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.chocolates.map(c => (
-              <ListItem
-                item={c}
-                key={c.id}
-                onSell={this.handleSell}
-                match={this.props.match}
-              />
-            ))}
+            {this.state.chocolates &&
+              this.state.chocolates.map(c => (
+                <ListItem
+                  item={c}
+                  key={c.id}
+                  onSell={this.handleSell}
+                  match={this.props.match}
+                />
+              ))}
           </tbody>
         </table>
       </div>

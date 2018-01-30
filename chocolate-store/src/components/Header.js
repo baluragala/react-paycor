@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Header = props => (
   <div>
     <h1>{props.title}</h1>
-    <nav>
+    {/*<nav>
       <ul>
         <li>
           <NavLink to="/home" activeStyle={{ backgroundColor: "red" }}>
@@ -22,7 +22,7 @@ const Header = props => (
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </nav>*/}
   </div>
 );
 
