@@ -28,11 +28,7 @@ class ListItem extends Component {
     console.log("render");
     return (
       <tr>
-        <td>
-          <Link to={`${this.props.match.url}/${this.props.item.id}/detail`}>
-            {this.props.item.name}
-          </Link>
-        </td>
+        <td>{this.props.item.name}</td>
         <td>{this.props.item.brand}</td>
         <td>{this.props.item.size}</td>
         <td>{this.props.item.price}</td>

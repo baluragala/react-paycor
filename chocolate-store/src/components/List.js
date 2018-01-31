@@ -3,11 +3,12 @@ import "./List.css";
 import ListItem from "./ListItem";
 import { NavLink, Route } from "react-router-dom";
 import Header from "./Header";
+import { connect } from "react-redux";
+import { getChocolatesActionCreator } from "../actionCreators";
 
 class List extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
   // handleSell = id => {
@@ -29,6 +30,10 @@ class List extends Component {
     return (
       <div>
         <p>List of chocolates</p>
+        <button onClick={this.props.dispatchGetChocolates}>
+          Get chocolates
+        </button>
+        {this.props.isLoading && <p>Please wait...</p>}
         <table>
           <thead>
             <tr>
@@ -40,8 +45,8 @@ class List extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.chocolates &&
-              this.state.chocolates.map(c => (
+            {this.props.cts &&
+              this.props.cts.map(c => (
                 <ListItem
                   item={c}
                   key={c.id}
@@ -56,4 +61,21 @@ class List extends Component {
   }
 }
 
-export default List;
+function mapStateToProps(state) {
+  return {
+    cts: state.chocolates,
+    offers: state.offers,
+    sales: state.sales,
+    isLoading: state.isLoading
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatchGetChocolates: () => dispatch(getChocolatesActionCreator())
+  };
+}
+
+let connectedHOC = connect(mapStateToProps, mapDispatchToProps);
+let containerList = connectedHOC(List);
+export default containerList;
