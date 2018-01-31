@@ -100,6 +100,96 @@ http://localhost:3000/chocolates/add -> L2
 
 http://localhost:3000/add 
 
+http://localhost:3000/chocolates/:id
+
+
+http://localhost:3000/chocolates/1
+
+id = 100
+id = 1 
+
+http://localhost:3000/chocolates/:id
+http://localhost:3000/chocolates/:id
+http://localhost:3000/chocolates/:id
+
+
+mounting
+	constructor
+	componentWillMount()
+	render
+	componentDidMount
+updating
+	componentWillReceiveProps
+	shouldComponentUpdate
+	componentWillUupdate
+	render
+	componentDidUpdate
+unmouting
+	componentWillUnmount
+
+React Router
+------------
+BrowserRouter
+HashRouter
+
+Route
+	path
+	component
+	render
+Switch
+Link
+NavLink
+
+Route Params
+
+history -> API
+location
+match ->
+
+this.props
+-----------------------
+Redux
+	Single Source of Thruht -> Store
+	state is read only
+	changes to state must be done with pure functions -> reducer
+	
+
+store 
+action
+reducer 
+
+let store = createStore(reducer)	
+	
+store.dispatch({})
+
+
+Action plan
+-----------
+GET_CHOCOLATES 
+GIFT_CHOCOLATE, id
+
+reducer
+-------
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 

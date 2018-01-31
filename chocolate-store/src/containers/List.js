@@ -63,11 +63,12 @@ class List extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
-    cts: state.chocolates,
-    offers: state.offers,
-    sales: state.sales,
-    isLoading: state.isLoading
+    cts: state.chocolateState.chocolates,
+    offers: state.chocolateState.offers,
+    sales: state.chocolateState.sales,
+    isLoading: state.chocolateState.isLoading
   };
 }
 

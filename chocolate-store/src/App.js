@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Detail from "./components/Detail";
 import { Switch } from "react-router-dom";
+import Search from "./containers/Search";
 
 class App extends Component {
   render() {
@@ -19,7 +20,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Header />
-        <List />
+        <Search />
         {/*<AddChocolate /> 
         <Switch>
           <Route exact path="/chocolates" component={List} />

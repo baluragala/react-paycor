@@ -5,20 +5,21 @@ import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { createStore, applyMiddleware } from "redux";
-import { reducer } from "./reducers";
+import reducer from "./reducers";
 import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
-import { getChocolatesWatcher } from "./saga";
+import { getAppWatchers } from "./saga";
 import { createLogger } from "redux-logger";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   reducer,
-  applyMiddleware(sagaMiddleware, createLogger())
+  composeWithDevTools(applyMiddleware(sagaMiddleware, createLogger()))
 );
 
-sagaMiddleware.run(getChocolatesWatcher);
+sagaMiddleware.run(getAppWatchers);
 
 ReactDOM.render(
   <Provider store={store}>
