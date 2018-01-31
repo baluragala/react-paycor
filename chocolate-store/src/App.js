@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import List from "./components/List";
+import List from "./containers/List";
 import Header from "./components/Header";
 import AddChocolate from "./components/AddChocolate";
 import { Route } from "react-router-dom";
