@@ -3,9 +3,9 @@ import "./List.css";
 import ListItem from "../components/ListItem";
 import { NavLink, Route } from "react-router-dom";
 import Header from "../components/Header";
-
+import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { getChocolatesActionCreator } from "../actionCreators";
+import * as chocolateActionCreators from "../actionCreators";
 
 class List extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class List extends Component {
     return (
       <div>
         <p>List of chocolates</p>
-        <button onClick={this.props.dispatchGetChocolates}>
+        <button onClick={this.props.actions.getChocolatesActionCreator}>
           Get chocolates
         </button>
         {this.props.isLoading && <p>Please wait...</p>}
@@ -74,7 +74,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatchGetChocolates: () => dispatch(getChocolatesActionCreator())
+    actions: bindActionCreators(chocolateActionCreators, dispatch)
   };
 }
 

@@ -21,6 +21,7 @@ class App extends Component {
         </header>
         <Header />
         <Search />
+        <List />
         {/*<AddChocolate /> 
         <Switch>
           <Route exact path="/chocolates" component={List} />
